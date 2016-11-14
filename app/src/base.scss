@@ -1,0 +1,15 @@
+$primary-color: #4188d0;
+$container-width: 100rem;
+$light-gray-background: #f4f5f6;
+$light-border: .1rem solid #d1d1d1;
+
+// Pre-emptive overrides of Milligram's purple
+$color-initial: #fff;
+$color-primary: $primary-color;
+$color-secondary: #606c76;
+$color-tertiary: #f4f5f6;
+$color-quaternary: #d1d1d1;
+$color-quinary: #e1e1e1;
+
+@import '~normalize.css/normalize';
+@import 'milligram';

@@ -1,0 +1,3 @@
+[submodule "vendor/milligram"]
+	path = vendor/milligram
+	url = https://github.com/milligram/milligram.git

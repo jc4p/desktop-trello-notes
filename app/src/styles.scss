@@ -1,0 +1,50 @@
+@import 'base';
+
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  padding-top: 20px;
+  max-width: $container-width;
+}
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.loading-spinner {
+  margin: 20px auto;
+}
+
+.card-item {
+  width: 20rem;
+  height: 20rem;
+  border: $light-border;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+
+  span {
+    align-self: center;
+  }
+}
+
+.lead {
+  font-size: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+.note-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}

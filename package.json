@@ -1,0 +1,57 @@
+{
+  "name": "trello-notes",
+  "version": "0.0.1",
+  "description": "Sticky Notes powered by Trello",
+  "main": "main.js",
+  "scripts": {
+    "build": "ENV=prod webpack --config webpack.config.prod.js --progress --profile --colors",
+    "start": "ENV=dev webpack --config webpack.config.dev && ENV=dev electron .",
+    "dev": "concurrently -k 'babel-node devserver.js' 'npm start'"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ],
+    "plugins": [
+      "transform-class-properties"
+    ]
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [],
+  "author": "@jc4p",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-class-properties": "^6.18.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "chokidar": "^1.6.1",
+    "concurrently": "^3.1.0",
+    "css-loader": "^0.25.0",
+    "electron": "^1.4.6",
+    "express": "^4.14.0",
+    "postcss-loader": "^1.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2",
+    "webpack-target-electron-renderer": "^0.4.0"
+  },
+  "dependencies": {
+    "electron-json-storage": "^2.1.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.12.2",
+    "node-trello": "^1.1.2",
+    "normalize.css": "^5.0.0",
+    "react-spinkit": "^1.1.11",
+    "sass-loader": "^4.0.2"
+  }
+}
