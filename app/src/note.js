@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import { h, render, Component } from 'preact';
 import electron, { ipcRenderer } from 'electron';
 import Trello from 'node-trello';
-import Spinner from 'react-spinkit'
+import marked from 'marked';
 
 import styles from './styles.scss'
 
@@ -45,10 +45,10 @@ export default class NoteView extends Component {
     return (
       <div className={styles.noteContainer}>
         {this.state.card != null && 
-          <p>{this.state.card.desc}</p>
+          <div dangerouslySetInnerHTML={{__html: marked(this.state.card.desc)}} className={styles.noteBody} />
         }
         {this.state.card == null &&
-          <Spinner spinnerName="cube-grid" noFadeIn={true} className={styles.loadingSpinner} /> 
+          <p className={styles.loadingSpinner}> #TODO: Loading indicator</p>
         }
       </div>
     )

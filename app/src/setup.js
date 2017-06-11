@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import { h, render, Component } from 'preact';
 import electron, { ipcRenderer } from 'electron';
 import Trello from 'node-trello';
-import Spinner from 'react-spinkit'
 
 import styles from './styles.scss'
 
@@ -134,7 +133,7 @@ export default class SetupView extends Component {
         { this.state.logged_in && this.state.board_id &&
           <div className={styles.cardContainer}>
           { this.state.trello_cards.length == 0 &&
-           <Spinner spinnerName="cube-grid" noFadeIn={true} className={styles.loadingSpinner} /> 
+           <p className={styles.loadingSpinner}>#TODO: Loading indicator</p>
           }
           { this.state.trello_cards.length > 0 && 
             this.state.trello_cards.map(function(item, i) {

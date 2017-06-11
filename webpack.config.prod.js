@@ -1,7 +1,5 @@
-var config = require('./webpack.config.dev.js');
+var config = require('./webpack.config.js');
 config.entry['setup'].shift();
 config.entry['note'].shift();
-config.plugins.shift();
-config.plugins.shift();
 config.output.publicPath = './dist/';
 module.exports = config;

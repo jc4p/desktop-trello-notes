@@ -204,9 +204,6 @@ function createWindow() {
   // and load the index.html of the app.
   setupWindow.loadURL(`file://${__dirname}/index.html`)
 
-  // Open the DevTools.
-  setupWindow.webContents.openDevTools()
-
   // Emitted when the window is closed.
   setupWindow.on('closed', () => { setupWindow = null })
   setupWindow.once('ready-to-show', () => { setupWindow.show() })

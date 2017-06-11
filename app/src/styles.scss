@@ -48,3 +48,17 @@
   flex-flow: column wrap;
   justify-content: center;
 }
+
+.note-body {
+  padding: 1rem;
+  h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+  ul {
+    margin-bottom: 0.25rem;
+    list-style: disc outside;
+    margin-left: 1rem;
+    padding-left: 2rem;
+  }
+}

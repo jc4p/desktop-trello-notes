@@ -1,20 +1,17 @@
 import 'babel-polyfill'; // generators
-import React from 'react';
-import { render as renderReact } from 'react-dom';
+import { h, render, Component } from 'preact';
 
-const srcPath = './src/note';
+import App from './src/note'
 
-let App = require(srcPath).default;
-
-const render = (Component) => {
-  renderReact(<Component />, document.getElementById('root'));
+const renderApp = (Component) => {
+  render(<Component />, document.getElementById('root'), document.getElementById('root').lastChild);
 };
 
 if (module.hot) {
-  module.hot.accept(srcPath, function() {
-    let newApp = require(srcPath).default;
-    render(newApp);
+  module.hot.accept('./src/note', function() {
+    let newApp = require('./src/note').default;
+    renderApp(newApp);
   });
 }
 
-render(App);
+renderApp(App);
