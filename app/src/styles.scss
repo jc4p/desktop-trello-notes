@@ -36,11 +36,11 @@
 }
 
 .lead {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 1.0rem;
 }
 
 .note-container {
@@ -52,13 +52,19 @@
 .note-body {
   padding: 1rem;
   h3 {
-    font-size: 2.5rem;
-    margin-bottom: 0.25rem;
+    font-family: 'Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+    margin-bottom: 0.25em;
   }
   ul {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5em;
     list-style: disc outside;
     margin-left: 1rem;
     padding-left: 2rem;
+  }
+  li {
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
   }
 }

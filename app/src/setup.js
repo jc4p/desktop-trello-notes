@@ -88,7 +88,12 @@ export default class SetupView extends Component {
 
   getName() {
     this.api.get("/1/members/me", (err, data) => {
-      if (err) throw err;
+      if (err) {
+        // token's prolly invalid
+        console.log(`Calling /me received error: ${err.message}`);
+        this.setState({ logged_in: false, trello_token: "" });
+        return;
+      }
       if (data && data['fullName'])
         this.setState({username: data['fullName']})
     });
